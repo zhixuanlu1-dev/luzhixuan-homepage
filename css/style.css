@@ -424,3 +424,6 @@ html[lang="en"]    [data-zh] { display: none !important; }
 .badge-legend .d-cofirst { background: #7c3aed; }
 .badge-legend .d-firstcorr { background: #15803d; }
 .badge-legend .d-coauthor { background: #94a3b8; }
+
+/* Home section now hosts the profile (moved from About) */
+#home { padding-top: 128px; }

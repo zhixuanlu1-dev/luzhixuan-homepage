@@ -23,13 +23,7 @@
     <nav class="site-nav" id="siteNav" aria-label="Primary">
       <a href="#home"><span data-zh>首页</span><span data-en>Home</span></a>
       <a href="#news"><span data-zh>动态</span><span data-en>News</span></a>
-      <div class="nav-item has-dropdown">
-        <a href="#about"><span data-zh>成员</span><span data-en>Members</span></a>
-        <div class="dropdown">
-          <a href="#about"><span data-zh>卢知轩简介</span><span data-en>Prof. Lu</span></a>
-          <a href="#students"><span data-zh>研究生成员</span><span data-en>Graduate Students</span></a>
-        </div>
-      </div>
+      <a href="#students"><span data-zh>研究生成员</span><span data-en>Graduate Students</span></a>
       <a href="#research"><span data-zh>研究方向</span><span data-en>Research</span></a>
       <a href="#publications"><span data-zh>科研成果</span><span data-en>Publications</span></a>
       <a href="#projects"><span data-zh>科研项目</span><span data-en>Projects</span></a>
@@ -49,48 +43,54 @@
 
 <main>
   <!-- ============ HERO ============ -->
-  <section class="hero" id="home">
-    <svg class="hero-bg" viewBox="0 0 1440 720" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-      <defs>
-        <linearGradient id="heroGrad" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stop-color="#0b1f42"/>
-          <stop offset="0.55" stop-color="#123a6e"/>
-          <stop offset="1" stop-color="#0e7490"/>
-        </linearGradient>
-        <radialGradient id="glow" cx="0.75" cy="0.2" r="0.55">
-          <stop offset="0" stop-color="#38bdf8" stop-opacity="0.35"/>
-          <stop offset="1" stop-color="#38bdf8" stop-opacity="0"/>
-        </radialGradient>
-      </defs>
-      <rect width="1440" height="720" fill="url(#heroGrad)"/>
-      <rect width="1440" height="720" fill="url(#glow)"/>
-      <g class="rings" fill="none" stroke="#7dd3fc" stroke-opacity="0.22">
-        <circle cx="1180" cy="180" r="240" stroke-width="1.5"/>
-        <circle cx="1180" cy="180" r="150" stroke-width="1.5"/>
-        <circle cx="1180" cy="180" r="80" stroke-width="2"/>
-        <circle cx="1180" cy="180" r="26" stroke-width="3" stroke-opacity="0.6"/>
-      </g>
-      <g class="dots" fill="#a5f3fc" fill-opacity="0.5">
-        <circle cx="150" cy="620" r="3"/>
-        <circle cx="300" cy="140" r="2"/>
-        <circle cx="560" cy="600" r="2.5"/>
-        <circle cx="760" cy="120" r="2"/>
-        <circle cx="980" cy="640" r="3"/>
-        <circle cx="1330" cy="560" r="2"/>
-        <circle cx="80" cy="300" r="1.6"/>
-        <circle cx="430" cy="360" r="1.6"/>
-      </g>
-    </svg>
-    <div class="hero-inner">
-      <p class="hero-eyebrow"><span data-zh>华侨大学 · 发光材料与信息显示研究院</span><span data-en>Huaqiao University · Institute of Luminescent Materials &amp; Information Displays</span></p>
-      <h1 class="hero-name">卢知轩 <span class="hero-name-en">Zhixuan Lu</span></h1>
-      <p class="hero-role"><span data-zh>副研究员 · 硕士生导师</span><span data-en>Associate Researcher · Master&rsquo;s Supervisor</span></p>
-      <p class="hero-tagline"><span data-zh>聚焦钙钛矿发光材料、等离激元纳米结构与光谱电化学</span><span data-en>Focusing on perovskite luminescent materials, plasmonic nanostructures, and spectroelectrochemistry</span></p>
-            <div class="hero-actions">
-        <a class="btn btn-light" href="#publications"><span data-zh>查看科研成果</span><span data-en>View Publications</span></a>
-        <a class="btn btn-ghost" href="https://scholar.google.com.hk/citations?user=P2GWkmgAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar ↗</a>
-        <a class="btn btn-ghost" href="https://faculty.hqu.edu.cn/LZX123456/zh_CN/index.htm" target="_blank" rel="noopener"><span data-zh>华侨大学教师主页 ↗</span><span data-en>HQU Faculty Page ↗</span></a>
-        <a class="btn btn-ghost" href="https://faculty.hqu.edu.cn/~Abe2yi/zh_CN/index.htm" target="_blank" rel="noopener"><span data-zh>魏展画教授团队成员 ↗</span><span data-en>Prof. Wei Zhanhua&rsquo;s Team Members ↗</span></a>
+  <section class="section" id="home">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow"><span data-zh>ABOUT</span><span data-en>ABOUT</span></p>
+        <h2><span data-zh>个人简介</span><span data-en>Biography</span></h2>
+      </div>
+      <div class="about-grid">
+        <aside class="profile-card">
+          <div class="profile-avatar"><img src="images/avatar.jpg" alt="卢知轩 Zhixuan Lu" loading="lazy"></div>
+          <h3>卢知轩 <span>Zhixuan Lu</span></h3>
+          <p class="profile-role"><span data-zh>副研究员 · 硕导</span><span data-en>Associate Researcher · Supervisor</span></p>
+          <dl class="facts">
+            <div><dt><span data-zh>职称</span><span data-en>Title</span></dt><dd><span data-zh>副研究员</span><span data-en>Associate Researcher</span></dd></div>
+            <div><dt><span data-zh>学位</span><span data-en>Degree</span></dt><dd><span data-zh>理学博士（厦门大学）</span><span data-en>PhD in Science (Xiamen Univ.)</span></dd></div>
+            <div><dt><span data-zh>单位</span><span data-en>Affiliation</span></dt><dd><span data-zh>华侨大学发光材料与信息显示研究院</span><span data-en>Institute of Luminescent Materials &amp; Info. Displays, HQU</span></dd></div>
+            <div><dt><span data-zh>入职时间</span><span data-en>Joined</span></dt><dd><span data-zh>2022 年 8 月</span><span data-en>Aug 2022</span></dd></div>
+            <div><dt><span data-zh>办公地点</span><span data-en>Office</span></dt><dd><span data-zh>综合实验大楼 B222 室</span><span data-en>Room B222, Comprehensive Lab Building</span></dd></div>
+            <div><dt><span data-zh>邮箱</span><span data-en>Email</span></dt><dd><a href="mailto:zxlu@hqu.edu.cn">zxlu@hqu.edu.cn</a></dd></div>
+          </dl>
+          <div class="profile-links">
+            <a href="https://scholar.google.com.hk/citations?user=P2GWkmgAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar ↗</a>
+            <a href="https://faculty.hqu.edu.cn/LZX123456/zh_CN/index.htm" target="_blank" rel="noopener"><span data-zh>华侨大学主页 ↗</span><span data-en>HQU Page ↗</span></a>
+            <a href="https://faculty.hqu.edu.cn/~Abe2yi/zh_CN/index.htm" target="_blank" rel="noopener"><span data-zh>魏展画教授团队成员 ↗</span><span data-en>Prof. Wei Zhanhua&rsquo;s Team Members ↗</span></a>
+          </div>
+        </aside>
+        <div class="bio-block">
+          <p class="bio-lead"><span data-zh>卢知轩，厦门大学理学博士，华侨大学发光研究院/材料学院副研究员，硕士生导师。</span><span data-en>Dr. Zhixuan Lu received his PhD in Science from Xiamen University and is currently an Associate Researcher at the Institute of Luminescent Materials and Information Displays / College of Materials Science and Engineering, Huaqiao University.</span></p>
+          <p><span data-zh>以第一或通讯作者在 <em>ACS Energy Letters</em>、<em>ACS Catalysis</em>、<em>Analytical Chemistry</em>、<em>Chemical Engineering Journal</em>、<em>Biosensors and Bioelectronics</em>、<em>Nanoscale</em> 等国际权威期刊发表 SCI 论文 13 篇，累计发表 SCI 论文 20 余篇；主持国家自然科学基金青年项目、福建省创青项目、中国博士后科学基金面上项目、固体表面物理化学国家重点实验室开放课题及华侨大学科研启动项目等项目。</span><span data-en>As first or corresponding author, he has published 13 SCI papers in leading journals including <em>ACS Energy Letters</em>, <em>ACS Catalysis</em>, <em>Analytical Chemistry</em>, <em>Chemical Engineering Journal</em>, <em>Biosensors and Bioelectronics</em>, and <em>Nanoscale</em>, with more than 20 SCI papers in total. He leads projects funded by the National Natural Science Foundation of China (Young Scientists Fund), Fujian Province, the China Postdoctoral Science Foundation, the State Key Laboratory of Physical Chemistry of Solid Surfaces, and Huaqiao University.</span></p>
+          <p><span data-zh>目前研究方向为等离激元纳米结构的制备及其在钙钛矿发光领域的应用。招收材料、化学等相关专业方向的硕士研究生，同时欢迎优秀本科生进组进行科研训练。</span><span data-en>His current research focuses on the preparation of plasmonic nanostructures and their applications in perovskite luminescence. He recruits master&rsquo;s students in materials science, chemistry, and related fields, and welcomes outstanding undergraduates to join the group for research training.</span></p>
+
+          <div class="timeline">
+            <div class="timeline-col">
+              <h4><span data-zh>教育经历</span><span data-en>Education</span></h4>
+              <ul class="timeline-list">
+                <li><span class="tl-year">2022</span><span data-zh>理学博士 · 厦门大学</span><span data-en>PhD in Science · Xiamen University</span></li>
+                <li><span class="tl-year">2017</span><span data-zh>理学硕士 · 中南大学</span><span data-en>MSc in Science · Central South University</span></li>
+                <li><span class="tl-year">2014</span><span data-zh>工学学士 · 中南大学</span><span data-en>BEng · Central South University</span></li>
+              </ul>
+            </div>
+            <div class="timeline-col">
+              <h4><span data-zh>工作经历</span><span data-en>Experience</span></h4>
+              <ul class="timeline-list">
+                <li><span class="tl-year"><span data-zh>2026-05 –至今</span><span data-en>2026-05 – Present</span></span><span data-zh>副研究员 · 华侨大学</span><span data-en>Associate Researcher · Huaqiao University</span></li>
+                <li><span class="tl-year">2022 – 2026</span><span data-zh>讲师 / 博士后 · 华侨大学</span><span data-en>Lecturer / Postdoc · Huaqiao University</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -172,57 +172,7 @@
   </section>
 
   <!-- ============ ABOUT ============ -->
-  <section class="section" id="about">
-    <div class="container">
-      <div class="section-head">
-        <p class="eyebrow"><span data-zh>ABOUT</span><span data-en>ABOUT</span></p>
-        <h2><span data-zh>个人简介</span><span data-en>Biography</span></h2>
-      </div>
-      <div class="about-grid">
-        <aside class="profile-card">
-          <div class="profile-avatar"><img src="images/avatar.jpg" alt="卢知轩 Zhixuan Lu" loading="lazy"></div>
-          <h3>卢知轩 <span>Zhixuan Lu</span></h3>
-          <p class="profile-role"><span data-zh>副研究员 · 硕导</span><span data-en>Associate Researcher · Supervisor</span></p>
-          <dl class="facts">
-            <div><dt><span data-zh>职称</span><span data-en>Title</span></dt><dd><span data-zh>副研究员</span><span data-en>Associate Researcher</span></dd></div>
-            <div><dt><span data-zh>学位</span><span data-en>Degree</span></dt><dd><span data-zh>理学博士（厦门大学）</span><span data-en>PhD in Science (Xiamen Univ.)</span></dd></div>
-            <div><dt><span data-zh>单位</span><span data-en>Affiliation</span></dt><dd><span data-zh>华侨大学发光材料与信息显示研究院</span><span data-en>Institute of Luminescent Materials &amp; Info. Displays, HQU</span></dd></div>
-            <div><dt><span data-zh>入职时间</span><span data-en>Joined</span></dt><dd><span data-zh>2022 年 8 月</span><span data-en>Aug 2022</span></dd></div>
-            <div><dt><span data-zh>办公地点</span><span data-en>Office</span></dt><dd><span data-zh>综合实验大楼 B222 室</span><span data-en>Room B222, Comprehensive Lab Building</span></dd></div>
-            <div><dt><span data-zh>邮箱</span><span data-en>Email</span></dt><dd><a href="mailto:zxlu@hqu.edu.cn">zxlu@hqu.edu.cn</a></dd></div>
-          </dl>
-          <div class="profile-links">
-            <a href="https://scholar.google.com.hk/citations?user=P2GWkmgAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar ↗</a>
-            <a href="https://faculty.hqu.edu.cn/LZX123456/zh_CN/index.htm" target="_blank" rel="noopener"><span data-zh>华侨大学主页 ↗</span><span data-en>HQU Page ↗</span></a>
-            <a href="https://faculty.hqu.edu.cn/~Abe2yi/zh_CN/index.htm" target="_blank" rel="noopener"><span data-zh>魏展画教授团队成员 ↗</span><span data-en>Prof. Wei Zhanhua&rsquo;s Team Members ↗</span></a>
-          </div>
-        </aside>
-        <div class="bio-block">
-          <p class="bio-lead"><span data-zh>卢知轩，厦门大学理学博士，华侨大学发光研究院/材料学院副研究员，硕士生导师。</span><span data-en>Dr. Zhixuan Lu received his PhD in Science from Xiamen University and is currently an Associate Researcher at the Institute of Luminescent Materials and Information Displays / College of Materials Science and Engineering, Huaqiao University.</span></p>
-          <p><span data-zh>以第一或通讯作者在 <em>ACS Energy Letters</em>、<em>ACS Catalysis</em>、<em>Analytical Chemistry</em>、<em>Chemical Engineering Journal</em>、<em>Biosensors and Bioelectronics</em>、<em>Nanoscale</em> 等国际权威期刊发表 SCI 论文 13 篇，累计发表 SCI 论文 20 余篇；主持国家自然科学基金青年项目、福建省创青项目、中国博士后科学基金面上项目、固体表面物理化学国家重点实验室开放课题及华侨大学科研启动项目等项目。</span><span data-en>As first or corresponding author, he has published 13 SCI papers in leading journals including <em>ACS Energy Letters</em>, <em>ACS Catalysis</em>, <em>Analytical Chemistry</em>, <em>Chemical Engineering Journal</em>, <em>Biosensors and Bioelectronics</em>, and <em>Nanoscale</em>, with more than 20 SCI papers in total. He leads projects funded by the National Natural Science Foundation of China (Young Scientists Fund), Fujian Province, the China Postdoctoral Science Foundation, the State Key Laboratory of Physical Chemistry of Solid Surfaces, and Huaqiao University.</span></p>
-          <p><span data-zh>目前研究方向为等离激元纳米结构的制备及其在钙钛矿发光领域的应用。招收材料、化学等相关专业方向的硕士研究生，同时欢迎优秀本科生进组进行科研训练。</span><span data-en>His current research focuses on the preparation of plasmonic nanostructures and their applications in perovskite luminescence. He recruits master&rsquo;s students in materials science, chemistry, and related fields, and welcomes outstanding undergraduates to join the group for research training.</span></p>
-
-          <div class="timeline">
-            <div class="timeline-col">
-              <h4><span data-zh>教育经历</span><span data-en>Education</span></h4>
-              <ul class="timeline-list">
-                <li><span class="tl-year">2022</span><span data-zh>理学博士 · 厦门大学</span><span data-en>PhD in Science · Xiamen University</span></li>
-                <li><span class="tl-year">2017</span><span data-zh>理学硕士 · 中南大学</span><span data-en>MSc in Science · Central South University</span></li>
-                <li><span class="tl-year">2014</span><span data-zh>工学学士 · 中南大学</span><span data-en>BEng · Central South University</span></li>
-              </ul>
-            </div>
-            <div class="timeline-col">
-              <h4><span data-zh>工作经历</span><span data-en>Experience</span></h4>
-              <ul class="timeline-list">
-                <li><span class="tl-year"><span data-zh>2026-05 –至今</span><span data-en>2026-05 – Present</span></span><span data-zh>副研究员 · 华侨大学</span><span data-en>Associate Researcher · Huaqiao University</span></li>
-                <li><span class="tl-year">2022 – 2026</span><span data-zh>讲师 / 博士后 · 华侨大学</span><span data-en>Lecturer / Postdoc · Huaqiao University</span></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  
 
   <!-- ============ STUDENTS ============ -->
   <section class="section" id="students">
