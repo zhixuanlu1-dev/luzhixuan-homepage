@@ -1,4 +1,4 @@
-﻿# 原始资料与敏感文件（不进入公开仓库）
+# 原始资料与敏感文件（不进入公开仓库）
 学校个人主页照片/
 主页卢知轩个人照片.jpg
 5240020641_*.pdf
@@ -8,3 +8,8 @@
 
 # Local Netlify folder
 .netlify
+
+# GitHub 一键推送工具（仅本地，不上传）
+github-upload.html
+github-upload-data.json
+push-github.ps1
