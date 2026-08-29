@@ -427,3 +427,14 @@ html[lang="en"]    [data-zh] { display: none !important; }
 
 /* Home section now hosts the profile (moved from About) */
 #home { padding-top: 128px; }
+
+/* ===== 2026 redesign: persistent navy header + alternating section backgrounds ===== */
+.site-header { background: #0d2247; border-bottom: 1px solid rgba(255,255,255,.08); box-shadow: 0 1px 10px rgba(15,30,60,.10); }
+.brand-name strong { color: #fff; }
+.brand-name em { color: #9fb3d1; }
+.nav-toggle span, .nav-toggle span::before, .nav-toggle span::after { color: #fff; }
+.section-alt { background: #eef4f9; }
+.contact-label { color: var(--teal-600); }
+.contact-value { color: var(--ink); }
+.contact-value a { color: var(--navy-700); }
+.contact-note { color: var(--muted); }

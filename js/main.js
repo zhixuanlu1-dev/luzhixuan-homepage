@@ -220,15 +220,6 @@
   try { saved = localStorage.getItem("lang") || "zh"; } catch (e) {}
   setLang(saved);
 
-  /* ---------- Header scroll state ---------- */
-  var header = document.getElementById("siteHeader");
-  function onScroll() {
-    if (!header) return;
-    header.classList.toggle("scrolled", window.scrollY > 30);
-  }
-  window.addEventListener("scroll", onScroll, { passive: true });
-  onScroll();
-
   /* ---------- Mobile nav ---------- */
   var navToggle = document.getElementById("navToggle");
   var siteNav = document.getElementById("siteNav");
