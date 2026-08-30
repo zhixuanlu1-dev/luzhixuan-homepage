@@ -397,4 +397,41 @@
 })();
 
 
+/* ---------- Single image lightbox (avatar & member photos) ---------- */
+(function () {
+  var box = document.createElement("div");
+  box.className = "lightbox";
+  box.innerHTML =
+    '<button class="lightbox-close" type="button" aria-label="Close">&times;</button>' +
+    '<img alt="">' +
+    '<div class="lightbox-caption"></div>';
+  document.body.appendChild(box);
 
+  var img = box.querySelector("img");
+  var caption = box.querySelector(".lightbox-caption");
+
+  function open(src, alt) {
+    img.src = src;
+    img.alt = alt || "";
+    caption.textContent = alt || "";
+    box.classList.add("open");
+    document.body.style.overflow = "hidden";
+  }
+  function close() {
+    box.classList.remove("open");
+    document.body.style.overflow = "";
+  }
+  box.querySelector(".lightbox-close").addEventListener("click", close);
+  box.addEventListener("click", function (e) { if (e.target === box) close(); });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && box.classList.contains("open")) close();
+  });
+
+  [".profile-avatar img", ".student-photo img"].forEach(function (sel) {
+    document.querySelectorAll(sel).forEach(function (el) {
+      el.addEventListener("click", function () {
+        open(el.src, el.alt || "");
+      });
+    });
+  });
+})();

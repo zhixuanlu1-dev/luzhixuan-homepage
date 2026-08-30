@@ -482,3 +482,6 @@ html[lang="en"]    [data-zh] { display: none !important; }
   width: 15px; height: 15px; margin: 0; cursor: pointer;
   accent-color: var(--navy-700);
 }
+
+/* ===== Clickable avatar & member photos ===== */
+.profile-avatar img, .student-photo img { cursor: zoom-in; }
