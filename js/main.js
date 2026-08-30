@@ -119,7 +119,10 @@
   /* ---------- Render publications ---------- */
   function renderPublications() {
     var root = document.getElementById("pubList");
+    var filterRoot = document.getElementById("pubFilter");
+    var moreBtn = document.getElementById("pubMore");
     if (!root) return;
+
     var groups = [];
     PUBLICATIONS.forEach(function (p) {
       var g = groups.filter(function (x) { return x.year === p.year; })[0];
@@ -127,10 +130,74 @@
       g.items.push(p);
     });
 
+    var years = groups.map(function (g) { return g.year; });
+    var latestTwo = years.slice(0, 2);
+
+    function getCheckedYears() {
+      var arr = [];
+      if (!filterRoot) return arr;
+      filterRoot.querySelectorAll("input[type=checkbox]:checked").forEach(function (cb) {
+        arr.push(parseInt(cb.value, 10));
+      });
+      return arr;
+    }
+
+    function applyFilter() {
+      var checked = getCheckedYears();
+      groups.forEach(function (g) {
+        var el = root.querySelector('.pub-group[data-year="' + g.year + '"]');
+        if (el) { el.style.display = checked.indexOf(g.year) !== -1 ? "" : "none"; }
+      });
+    }
+
+    function updateMoreButton() {
+      if (!moreBtn) return;
+      var all = getCheckedYears().length === years.length;
+      var zh = moreBtn.querySelector("[data-zh]");
+      var en = moreBtn.querySelector("[data-en]");
+      if (zh) zh.textContent = all ? "收起" : "展开更多";
+      if (en) en.textContent = all ? "Show less" : "Show more";
+    }
+
+    if (filterRoot) {
+      years.forEach(function (y) {
+        var label = document.createElement("label");
+        label.className = "pub-filter-item";
+        var cb = document.createElement("input");
+        cb.type = "checkbox";
+        cb.value = String(y);
+        cb.checked = latestTwo.indexOf(y) !== -1;
+        var span = document.createElement("span");
+        span.textContent = String(y);
+        label.appendChild(cb);
+        label.appendChild(span);
+        cb.addEventListener("change", function () {
+          applyFilter();
+          updateMoreButton();
+        });
+        filterRoot.appendChild(label);
+      });
+    }
+
+    if (moreBtn) {
+      moreBtn.addEventListener("click", function () {
+        var all = getCheckedYears().length === years.length;
+        var target = all ? latestTwo : years;
+        if (filterRoot) {
+          filterRoot.querySelectorAll("input[type=checkbox]").forEach(function (cb) {
+            cb.checked = target.indexOf(parseInt(cb.value, 10)) !== -1;
+          });
+        }
+        applyFilter();
+        updateMoreButton();
+      });
+    }
+
     var frag = document.createDocumentFragment();
     groups.forEach(function (g) {
       var group = document.createElement("div");
       group.className = "pub-group";
+      group.setAttribute("data-year", String(g.year));
       var year = document.createElement("h3");
       year.className = "pub-year";
       year.textContent = g.year;
@@ -201,9 +268,12 @@
       frag.appendChild(group);
     });
     root.appendChild(frag);
+
+    applyFilter();
+    updateMoreButton();
   }
 
-  /* ---------- Language toggle ---------- */
+/* ---------- Language toggle ---------- */
   var LANGS = { "zh": "zh-CN", "en": "en" };
   function setLang(code) {
     var htmlLang = LANGS[code] || "zh-CN";
@@ -251,7 +321,26 @@
     revealEls.forEach(function (el) { el.classList.add("reveal"); io.observe(el); });
   }
 
+  /* ---------- More / expand buttons ---------- */
+  function setMoreText(btn, collapsed) {
+    var zh = btn.querySelector("[data-zh]");
+    var en = btn.querySelector("[data-en]");
+    if (zh) zh.textContent = collapsed ? "展开更多" : "收起";
+    if (en) en.textContent = collapsed ? "Show more" : "Show less";
+  }
+  function initMore(btnId, target) {
+    var btn = document.getElementById(btnId);
+    if (!btn || !target) return;
+    btn.addEventListener("click", function () {
+      var collapsed = target.classList.toggle("collapsed");
+      setMoreText(btn, collapsed);
+    });
+  }
+  initMore("newsMore", document.querySelector(".news-list"));
+  initMore("galleryMore", document.querySelector(".gallery-grid"));
+
   renderPublications();
+
 })();
 
 /* ---------- Gallery lightbox ---------- */

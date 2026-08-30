@@ -104,7 +104,7 @@
         <p class="eyebrow"><span data-zh>NEWS</span><span data-en>NEWS</span></p>
         <h2><span data-zh>新闻动态</span><span data-en>News</span></h2>
       </div>
-      <ul class="news-list">
+      <ul class="news-list collapsed">
         <li class="news-item">
           <span class="news-date">2026-09</span>
           <div class="news-body">
@@ -210,6 +210,10 @@
           </div>
         </li>
       </ul>
+      <div class="more-wrap">
+        <button class="btn-more" id="newsMore" type="button"><span data-zh>展开更多</span><span data-en>Show more</span></button>
+      </div>
+
     </div>
   </section>
 
@@ -278,7 +282,12 @@
         <h2><span data-zh>科研成果</span><span data-en>Selected Publications</span></h2>
       </div>
       
+      <div class="pub-filter" id="pubFilter" role="group" aria-label="Filter by year"></div>
       <div class="pub-list" id="pubList" aria-live="polite"></div>
+      <div class="more-wrap">
+        <button class="btn-more" id="pubMore" type="button"><span data-zh>展开更多</span><span data-en>Show more</span></button>
+      </div>
+
     </div>
   </section>
 
@@ -331,7 +340,7 @@
         <p class="eyebrow"><span data-zh>GALLERY</span><span data-en>GALLERY</span></p>
         <h2><span data-zh>相册</span><span data-en>Gallery</span></h2>
       </div>
-      <div class="gallery-grid" id="galleryGrid">
+      <div class="gallery-grid collapsed" id="galleryGrid">
         <figure class="gallery-item" data-caption-zh="2026 校级创新大赛银奖" data-caption-en="2026 University Innovation Competition · Silver Award">
           <img src="images/gallery/gallery-award-2026.png" alt="2026 校级创新大赛银奖" loading="lazy">
           <figcaption class="gallery-figcaption"><span data-zh>2026 校级创新大赛银奖</span><span data-en>2026 University Innovation Competition · Silver Award</span></figcaption>
@@ -385,6 +394,10 @@
           <figcaption class="gallery-figcaption"><span data-zh>2024.09 小组聚餐</span><span data-en>Group dinner (Sep 2024)</span></figcaption>
         </figure>
       </div>
+      <div class="more-wrap">
+        <button class="btn-more" id="galleryMore" type="button"><span data-zh>展开更多</span><span data-en>Show more</span></button>
+      </div>
+
     </div>
   </section>
 
