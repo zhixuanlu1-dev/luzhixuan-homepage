@@ -485,3 +485,16 @@ html[lang="en"]    [data-zh] { display: none !important; }
 
 /* ===== Clickable avatar & member photos ===== */
 .profile-avatar img, .student-photo img { cursor: zoom-in; }
+
+/* ===== Visit counter ===== */
+.visit-counter {
+  text-align: right;
+  margin-top: 26px;
+  font-size: 14px;
+  color: var(--muted);
+}
+.visit-counter strong {
+  color: var(--teal-600);
+  font-weight: 700;
+  font-size: 15px;
+}
