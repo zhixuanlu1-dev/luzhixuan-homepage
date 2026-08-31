@@ -488,13 +488,10 @@ html[lang="en"]    [data-zh] { display: none !important; }
 
 /* ===== Visit counter ===== */
 .visit-counter {
-  text-align: right;
-  margin-top: 26px;
-  font-size: 14px;
-  color: var(--muted);
+  font-size: 13px;
+  color: #9fb3d1;
 }
 .visit-counter strong {
-  color: var(--teal-600);
+  color: #7dd3fc;
   font-weight: 700;
-  font-size: 15px;
 }
