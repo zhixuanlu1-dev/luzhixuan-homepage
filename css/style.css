@@ -495,3 +495,14 @@ html[lang="en"]    [data-zh] { display: none !important; }
   color: #7dd3fc;
   font-weight: 700;
 }
+
+/* ===== Research direction figures ===== */
+.card-figure {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  margin: 4px 0 18px;
+  background: #fff;
+}
