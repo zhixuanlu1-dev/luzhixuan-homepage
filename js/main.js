@@ -427,7 +427,7 @@
     if (e.key === "Escape" && box.classList.contains("open")) close();
   });
 
-  [".profile-avatar img", ".student-photo img"].forEach(function (sel) {
+  [".profile-avatar img", ".student-photo img", ".card-figure"].forEach(function (sel) {
     document.querySelectorAll(sel).forEach(function (el) {
       el.addEventListener("click", function () {
         open(el.src, el.alt || "");

@@ -484,7 +484,7 @@ html[lang="en"]    [data-zh] { display: none !important; }
 }
 
 /* ===== Clickable avatar & member photos ===== */
-.profile-avatar img, .student-photo img { cursor: zoom-in; }
+.profile-avatar img, .student-photo img, .card-figure { cursor: zoom-in; }
 
 /* ===== Visit counter ===== */
 .visit-counter {
